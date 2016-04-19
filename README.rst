@@ -1,7 +1,7 @@
 Logging tool for SkyRC iMAX B6 Mini (and possibly similar) chargers
 -------------------------------------------------------------------
 
-This tool can monitor and log data from chinese 4-button battery chargers that
+This tool can monitor and log data from Chinese 4-button battery chargers that
 come with a USB port.
 
 Right now, only SkyRC’s iMAX B6 Mini charger is supported, but it’s very
@@ -12,7 +12,7 @@ Compilation
 
 This needs libudev.
 
-``cc $(pkg-config --cflags --libs libudev) -lm b6mon.c -o b6mon``
+``cc b6mon.c -o b6mon $(pkg-config --cflags --libs libudev) -lm``
 
 Usage
 =====
@@ -27,7 +27,7 @@ b6mon -[p|s]
 +========+=========================================================+
 | -p     | Monitor process status until end of process.            |
 +--------+---------------------------------------------------------+
-| -s     | continuously monitor system status (cell voltage only)  |
+| -s     | Continuously monitor system status (cell voltage only)  |
 +--------+---------------------------------------------------------+
 
 To do (aka patches welcome)
